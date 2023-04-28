@@ -1,27 +1,32 @@
 package pop;
 
-/*23. 다음은 키보드로부터 계좌 정보를 입력받아 계좌를 관리하는 프로그램입니다. 계좌는Account
-객체로 생성되고 BankApplication에서 길이 100인 Account[ ] 배열로 관리됩니다. 실행 결과를
-보고, Account와 BankApplication 클래스를 작성해보세요(키보드로 입력받을 때는 Scanner
-의 nextLine ( ) 메소드를 사용).*/
-
-
 public class Account2 {
+
+	/*22. 은행 계좌 객체인 Account 객체는 잔고(balance) 필드를 가지고 있습니다. balance 필드는
+	음수값이 될 수 없고, 최대 백만 원까지만 저장할 수 있습니다. 외부에서 balance 필드를 마음대로
+	변경하지 못하도록 하고, 0 <= balance <= 1,000,000 범위의 값만 가질 수 있도록 Account 클래
+	스를 작성해보세요.
+
+	➊ Setter와 Getter를 이용
+	➋ 0과 1,000,000은 MIN_BALANCE와 MAX_BALANCE 상수를 선언해서 이용
+	➌ Setter의 매개값이 음수이거나 백만 원을 초과하면 현재 balance 값을 유지*/
 	
-	static String a;
-	public static void main(String[] args) {
-		
-	while(true) {
-		
-		switch (a) {
-		case "1": System.out.println("계좌생성");
-		
-		break;
-		
-		default:
-			break;
-		}
-	}	
+	static final int MIN_BALANCE = 0;
+	static final int MAX_BALANCE = 10000000;
+	
+	private int balance;
+	
+	
+	public int getBalance() {
+		return balance;
 	}
 
+	public void setBalance(int balance) {
+		if(MIN_BALANCE <= balance && MAX_BALANCE >= balance) {
+		this.balance = balance;
+	} else {
+		
+	
+	}
+}
 }
