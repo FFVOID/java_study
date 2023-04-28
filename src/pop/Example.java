@@ -14,35 +14,41 @@ class Example {
 	static int a = 0;
 
 	static int max(int[] data) {
-		if (data != null && data != new int[] {}) {
-
+		
+		if(data != null && data.length != 0) {
+			
 			for (int i = 0; i < data.length; i++) {
 				if (a < data[i]) {
 					a = data[i];
 				}
 			}
+			return a;
+		}
+		
+		if (data == null || data.length == 0) {
 
 		}
-		if (data == null) {
-			return -999989;
-
+		return -999999;
 		}
+		/*
+		 * if (data == null) { return -999989;
+		 * 
+		 * } else if (data == new int[] {}) { return -999999; }
+		 * 
+		 * return a;
+		 */
 
-		if (data == new int[] {}) {
-			return -999999;
-		}
-		return a;
-
-	}
+	
 
 	public static void main(String[] args) {
 		// int[] data = null;
 		int[] data = new int[] {};
-		// int[] data = { 3, 2, 9, 4, 7 };
+
+		 //int[] data = { 3, 2, 9, 4, 7 };
 		System.out.println(java.util.Arrays.toString(data));
-		// System.out.println("최대값:" + max(data));
-		System.out.println("최대값:" + max(null));
-		// System.out.println("최대값:" + max(new int[] {})); // 크기가 0인 배열
+		//System.out.println("최대값:" + max(data));
+		 //System.out.println("최대값:" + max(null));
+		System.out.println("최대값:" + max(new int[] {})); // 크기가 0인 배열
 
 	}
 

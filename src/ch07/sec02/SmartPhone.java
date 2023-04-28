@@ -7,9 +7,8 @@ public class SmartPhone extends Phone {
 	//생성자
 	//상속을 받으면 자식클래스에서 부모클래스에 있는 필드에 접근 할수있따
 	public SmartPhone(String model, String color) {
-		super(); //부모클래스에 있는 생성자 실행
-		this.model = model;
-		this.color = color;
+		super(model,color); //부모클래스에 있는 생성자 실행
+		
 		System.out.println("SmartPhone(String model, String color) 생성자 실행");
 	}
 	
