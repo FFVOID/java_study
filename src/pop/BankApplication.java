@@ -90,7 +90,7 @@ public class BankApplication {
 	// 계좌목록
 	private static void accountList() {
 		System.out.println("---------");
-		System.out.println("  계좌목록 ");
+		System.out.println("계좌목록");
 		System.out.println("---------");
 
 		for (Account account : accountArray) {
@@ -108,7 +108,7 @@ public class BankApplication {
 	private static void deposit() {
 
 		System.out.println("---------");
-		System.out.println("   예금  ");
+		System.out.println("예금");
 		System.out.println("---------");
 		System.out.println("계좌번호:");
 		String input = scanner.next();
@@ -131,7 +131,7 @@ public class BankApplication {
 	// 출금하기
 	private static void withdraw() {
 		System.out.println("---------");
-		System.out.println(" 출금 ");
+		System.out.println("출금");
 		System.out.println("---------");
 		System.out.println("계좌번호:");
 		String input2 = scanner.next();
