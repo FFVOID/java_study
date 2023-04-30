@@ -10,6 +10,7 @@ public class BankApplication {
 	private static Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
+
 		boolean run = true;
 
 		while (run) {
@@ -38,6 +39,7 @@ public class BankApplication {
 				break;
 			case 5:
 				run = false;
+				System.out.println("프로그램 종료.");
 				break;
 			default:
 				System.out.println("1~5 사이의 숫자를 입력해주세요");
@@ -81,9 +83,8 @@ public class BankApplication {
 
 		// 계좌가 잘 생성이 되었나 확인(객체 이므로 주소가 찍힌다
 		/*
-		for (Account account : accountArray) {
-			System.out.println(account);
-		}*/
+		 * for (Account account : accountArray) { System.out.println(account); }
+		 */
 	}
 
 	// 계좌목록
@@ -91,33 +92,58 @@ public class BankApplication {
 		System.out.println("---------");
 		System.out.println("  계좌목록 ");
 		System.out.println("---------");
-		
-		for(Account account : accountArray) {
-			if(account != null) {
-				
-				System.out.println(account.getAno() +"   "+ account.getOwner() +"   "+ account.getBalance());
-				
+
+		for (Account account : accountArray) {
+			if (account != null) {
+
+				System.out.println(account.getAno() + "   " + account.getOwner() + "   " + account.getBalance());
+
+			} else {
+				break;
 			}
 		}
 	}
 
 	// 예금하기
 	private static void deposit() {
+
 		System.out.println("---------");
 		System.out.println("   예금  ");
 		System.out.println("---------");
-		
 		System.out.println("계좌번호:");
-		for(Account account : accountArray) {
-			if(account.getAno().equals(scanner.next())) {
+		String input = scanner.next();
+		for (Account account : accountArray) {
+
+			if (account.getAno().equals(input)) {
+
+				System.out.println(account.getAno());
 				System.out.println("예금액:");
 				account.setBalance(account.getBalance() + scanner.nextInt());
-			} System.out.println(account.getBalance());
+				System.out.println("잔고:" + account.getBalance());
+				break;
+
+			}
+
 		}
+
 	}
 
 	// 출금하기
 	private static void withdraw() {
+		System.out.println("---------");
+		System.out.println(" 출금 ");
+		System.out.println("---------");
+		System.out.println("계좌번호:");
+		String input2 = scanner.next();
+		for (Account account : accountArray) {
+
+			if (account.getAno().equals(input2)) {
+				System.out.println("출금액:");
+				account.setBalance(account.getBalance() - scanner.nextInt());
+				System.out.println("출금이 성공 되었습니다 잔고:" + account.getBalance());
+				break;
+			}
+		}
 	}
 
 }
