@@ -96,7 +96,7 @@ public class BankApplication {
 		for (Account account : accountArray) {
 			if (account != null) {
 
-				System.out.println(account.getAno() + "   " + account.getOwner() + "   " + account.getBalance());
+				System.out.println(account.getAno() + "\t" + account.getOwner() + "\t" + account.getBalance());
 
 			} else {
 				break;
@@ -145,5 +145,32 @@ public class BankApplication {
 			}
 		}
 	}
+	
+	//계좌찾기
+	
+	/*리턴해 주는 값을 같은 타입인 Account로 받는다
+	account 변수에는 찾은 계좌가 들어있다.
+	Account account = findAccount(ano);
+	if(account == null){
+	system.out.println("계좌가없습니다");
+	return; 메소드를 끝낸다.
+	
+	  private static Account findAccount(String ano){
+	  	Account resultAccount = null;
+	  
+	  for(Account account : accountArray) {
+	  	배열의 값이 null이 아닐때만 실행한다 => account객체를 가지고 있을때
+	  if(account != null){
+	  		if(ano.equals(account.getAno())){
+	 			여기서 return을 하면 안되므로 아래와같이
+	 찾은 계좌를 Account타입의 변수인 resultAccount에 넣어준다
+	 resultAccount = account;
+	 break;
+	 }
+	 }
+	 }
+	  }*/
+	
+	
 
 }

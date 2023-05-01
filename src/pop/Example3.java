@@ -5,7 +5,8 @@ public class Example3 {
 	// isNumber 메소드 작성
 	static boolean isNumber(String str) {
 		for(int i = 0; i < str.length();i++) {
-			if ('a' <= str.charAt(i)  &&  str.charAt(i) <= 'z' ){
+			char ch = str.charAt(i);
+			if ('0' >ch  ||  ch > '9' ){
 				return false;
 			} 
 		}

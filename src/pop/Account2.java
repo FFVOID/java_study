@@ -12,7 +12,7 @@ public class Account2 {
 	➌ Setter의 매개값이 음수이거나 백만 원을 초과하면 현재 balance 값을 유지*/
 	
 	static final int MIN_BALANCE = 0;
-	static final int MAX_BALANCE = 10000000;
+	static final int MAX_BALANCE = 1000000;
 	
 	private int balance;
 	
