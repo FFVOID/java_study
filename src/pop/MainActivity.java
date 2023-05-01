@@ -1,12 +1,15 @@
 package pop;
 
 public class MainActivity extends Activity{
-	public static void main(String[] args) {
-		
+	
+	
+		@Override
 		public void onCreate() {
-			
-			onCreate();
-			System.out.println("추가적인실행내용");
-		}
+			super.onCreate();
+			System.out.println("추가적인 실행내용");
+		
 	}
+	
+	
+	
 }
