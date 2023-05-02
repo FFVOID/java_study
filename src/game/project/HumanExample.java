@@ -33,7 +33,7 @@ public class HumanExample {
 
 		if (human == null) {
 
-			System.out.println("존재하지 않는 회원");
+			System.out.println("존재하지 않는 사람");
 		} else {
 
 			status(human, 20);
@@ -72,8 +72,9 @@ public class HumanExample {
 
 	public static void status(Human human, int num) {
 		System.out.println("현재 아이디:" + human.getHumanID());
-		int str = human.powerUp(num);
-		System.out.println("타입:" + human.getTypeName() + "\t" + "공격력:" + str);
+		System.out.println();
+		int str = human.powerUp(num); // 타입에 따른 기본공격력
+		System.out.println("타입:" + human.getTypeName() + "\t" + "기본 공격력:" + str);
 
 	}
 
