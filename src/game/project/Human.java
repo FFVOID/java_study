@@ -8,7 +8,7 @@ public class Human {
 	protected String typeName;
 	int power;
 	int overpower;
-	int defense;
+	int weapon;
 	
 	//생성자
 	public Human() {
@@ -27,11 +27,11 @@ public class Human {
 	private void initHuman() {
 		type = "human";
 		power = 1;
-		defense = 1;
+		weapon = 1;
 	}
 	
 	public int powerUp(int num) {
-		overpower = (num * power);
+		overpower = num + power + weapon;
 		return overpower;
 	}
 

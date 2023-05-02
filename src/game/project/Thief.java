@@ -6,12 +6,12 @@ public class Thief extends Human {
 		
 		super.type = "Thief";
 		super.power = 20;
-		super.defense = 10;
+		super.weapon = 10;
 	}
 
 	@Override
 	public int powerUp(int num) {
-		overpower = (num * power) + defense;
+		overpower = (num * power) + weapon;
 		return overpower;
 	}
 

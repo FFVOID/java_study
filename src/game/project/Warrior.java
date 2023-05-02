@@ -6,14 +6,14 @@ public class Warrior extends Human{
 		super(humanName,humanID,typeName);
 		
 		super.type = "Warrior";
-		super.power = 10;
-		super.defense = 50;
+		super.power = 15;
+		super.weapon = 50;
 		
 	}
 
 	@Override
 	public int powerUp(int num) {
-		overpower = (num * power) + defense;
+		overpower = (num * power) + weapon;
 		return overpower;
 	}
 	

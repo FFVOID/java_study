@@ -6,13 +6,13 @@ public class Archer extends Human {
 		super(humanName,humanID,typeName);
 		
 		super.type = "Archer";
-		super.power = 15;
-		super.defense = 10;
+		super.power = 10;
+		super.weapon = 10;
 	}
 
 	@Override
 	public int powerUp(int num) {
-		overpower = (num * power) + defense;
+		overpower = (num * power) + weapon;
 		return overpower;
 	}
 }
