@@ -19,14 +19,17 @@ public class HumanExample {
 		Human Human2 = new Archer("이길동", 1001, "궁수");
 		Human Human3 = new Archer("김길동", 1002, "궁수");
 		Human Human4 = new Thief("박길동", 1003, "도적");
+		Human Human5 = new Wizard("최길동", 1004, "마법사");
 
 		humanList.add(Human1);
 		humanList.add(Human2);
 		humanList.add(Human3);
 		humanList.add(Human4);
+		humanList.add(Human5);
+		
 
 		// Human human = findHuman(1000);
-		Human human = findHuman(1003);
+		Human human = findHuman(1004);
 		Human human2 = findHuman(1001);
 		
 		
@@ -74,22 +77,22 @@ public class HumanExample {
 		System.out.println("현재 아이디:" + human.getHumanID());
 		System.out.println();
 		int str = human.powerUp(num); // 타입에 따른 기본공격력
-		System.out.println("타입:" + human.getTypeName() + "\t" + "기본 공격력:" + str);
+		System.out.println("타입:" + human.getTypeName() + " " + "기본공격력:" + str);
 
 	}
 
 	public static void upgrade(Human human, int num) {
 		System.out.println("강화");
-		int str2 = human.powerUp(num * 2);
-		System.out.println("성공!" + " " + "강화된 공격력:" + str2);
+		int str = human.powerUp(num * 2);
+		System.out.println("성공!" + " " + "강화된 공격력:" + str);
 
 	}
 
 	public static void typeUpgrade(Human human) {
 
-		int str3 = human.overpower;// 기본 공격력
+		int str = human.overpower;// 기본 공격력
 
-		if (str3 > 300) {
+		if (str > 300) {
 			System.out.println("전직이 가능합니다");
 		} else {
 			System.out.println("전직을 위한 공격력이 부족합니다");
@@ -98,10 +101,10 @@ public class HumanExample {
 	}
 
 	public static void hunt(Human human) {
-		int str4 = human.overpower; // 강화된 공격력
+		int str = human.overpower; // 강화된 공격력
 		int dragon = 800;
 
-		if (str4 > dragon) {
+		if (str > dragon) {
 			System.out.println("드래곤 사냥이 가능합니다.");
 		} else {
 			System.out.println("드래곤 사냥이 불가능합니다.");
