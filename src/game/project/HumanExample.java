@@ -21,8 +21,8 @@ public class HumanExample {
 		Human human = findHuman(1003);
 
 		if (human == null) {
-			System.out.println("====== 경고 =======");
-			System.out.println("존재하지 않는 회원입니다.");
+			
+			System.out.println("존재하지 않는 회원");
 		} else {
 			status(human, 20);
 			System.out.println();
