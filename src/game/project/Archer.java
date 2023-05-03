@@ -12,7 +12,7 @@ public class Archer extends Human {
 
 	@Override
 	public int powerUp(int num) {
-		overpower = (num * power) + weapon;
+		overpower = (num * power) + weapon * 2 ;
 		return overpower;
 	}
 }
