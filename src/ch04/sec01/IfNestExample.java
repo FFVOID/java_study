@@ -27,3 +27,4 @@ public class IfNestExample {
 	}
 			System.out.println("학점:" + grade + ", 점수:" + score);
 }
+	
