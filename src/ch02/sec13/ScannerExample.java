@@ -14,28 +14,25 @@ public class ScannerExample {
 		System.out.print("y값 입력:");
 		String strY = scanner.nextLine(); // 문자형으로 입력받음
 		int y = Integer.parseInt(strY); // 문자형 -> 숫자형 변환
-		
+
 		int result = x + y;
 		System.out.println("x + y:" + result);
-		
-		while(true) {
+
+		while (true) {
 			System.out.println("입력 문자열: ");
 			String data = scanner.nextLine();
-			
-			if(data.equals("q")) {
+
+			if (data.equals("q")) {
 				break;
 			}
-			
+
 			System.out.println("출력 문자열: " + data);
 		}
 		System.out.println("종료");
-		
-		
+
 		double area = 3.14159 * 10 * 10;
-		System.out.printf("반지름이 %d인 원의 넓이: %10.2f",10,area);
-		
-		/
-		
+		System.out.printf("반지름이 %d인 원의 넓이: %10.2f", 10, area);
+
 	}
 
 }
